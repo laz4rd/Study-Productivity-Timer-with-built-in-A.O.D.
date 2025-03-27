@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: #E1E3D4;
+    background-color: #DFE1D6;
     color: #1d1d1d;
     font-family: 'pix';
     text-align: center;
@@ -54,7 +54,7 @@ h1 {
 }
 
 #timer span.seconds {
-    color: #F55313;
+    color: #A9161B;
 }
 
 .button-container {
@@ -72,7 +72,7 @@ h1 {
 
 .button-container button {
     background-color: #3a3a3a;
-    color: #E1E3D4;
+    color: #DFE1D6;
     border: none;
     padding: 20px;
     font-size: 1.4em;
@@ -84,7 +84,7 @@ h1 {
 }
 
 .button-container button:hover {
-    background-color: #F55313;
+    background-color: #A9161B;
     transform: scale(1.05);
 }
 
@@ -111,7 +111,7 @@ h1 {
 .pill-container button {
     background: none;
     border: none;
-    color: #E1E3D4;
+    color: #DFE1D6;
     font-size: 1.5em;
     padding: 12px;
     border-radius: 30px;
@@ -125,7 +125,7 @@ h1 {
 }
 
 .pill-container button:hover {
-    background: #F55313;
+    background: #A9161B;
     transform: scale(1.05);
 }
 
@@ -137,11 +137,11 @@ h1 {
 /* Dark Mode Styles */
 .dark-mode {
     background-color: #1d1d1d;
-    color: #E1E3D4;
+    color: #DFE1D6;
 }
 
 .dark-mode .pill-container {
-    background: #E1E3D4;
+    background: #DFE1D6;
 }
 
 .dark-mode .pill-container button {
