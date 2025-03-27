@@ -1,0 +1,188 @@
+html {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Square';
+    src: url('fonts/Square.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pix';
+    src: url('fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SquareOut';
+    src: url('fonts/Squareo.ttf') format('truetype');
+}
+
+body {
+    background-color: #E1E3D4;
+    color: #1d1d1d;
+    font-family: 'pix';
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.5s, color 0.5s;
+}
+
+h1 {
+    font-family: 'pix';
+    font-weight: 700;
+    position: absolute;
+    top: 20px;
+    transition: opacity 0.5s;
+}
+
+#timer {
+    font-family: 'Square';
+    font-size: 12em;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    transition: color 1s, text-shadow 0.5s, font-size 1s;
+}
+
+#timer span.hours {
+    color: #7a7a7a;
+}
+
+#timer span.seconds {
+    color: #F55313;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 15px;
+    width: 90%;
+    max-width: 450px;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    transition: opacity 0.5s;
+}
+
+.button-container button {
+    background-color: #3a3a3a;
+    color: #E1E3D4;
+    border: none;
+    padding: 20px;
+    font-size: 1.4em;
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100%;
+}
+
+.button-container button:hover {
+    background-color: #F55313;
+    transform: scale(1.05);
+}
+
+.button-container button:disabled {
+    background-color: #7a7a7a;
+    cursor: not-allowed;
+}
+
+.pill-container {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    transform: translateY(-50%) scale(0.75);
+    transform-origin: center right;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: #3a3a3a;
+    padding: 7px;
+    border-radius: 30px;
+    transition: opacity 0.5s;
+}
+
+.pill-container button {
+    background: none;
+    border: none;
+    color: #E1E3D4;
+    font-size: 1.5em;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.pill-container button:hover {
+    background: #F55313;
+    transform: scale(1.05);
+}
+
+.pill-container button:disabled {
+    background: #7a7a7a;
+    cursor: not-allowed;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1d1d1d;
+    color: #E1E3D4;
+}
+
+.dark-mode .pill-container {
+    background: #E1E3D4;
+}
+
+.dark-mode .pill-container button {
+    color: #1d1d1d;
+}
+
+.dark-mode .button-container button {
+    background-color: #7a7a7a;
+}
+
+/* Silent Mode */
+.silent-mode {
+    background-color: black !important;
+    color: black !important;
+}
+
+/* Ensure h1 is visible in white */
+.silent-mode h1 {
+    opacity: 0.5;
+    color: white !important;
+}
+
+/* Timer text should be invisible but have a white stroke */
+.silent-mode .hours,
+.silent-mode .minutes,
+.silent-mode .seconds {
+    color: white;
+    font-family: 'SquareOut';
+    font-weight: lighter;
+    transform: translateY(50%);
+    transition: 1s;
+}
+
+.silent-mode .seconds {
+    color: white;
+    font-size: 20rem;
+}
+
+/* Hide buttons & sidebar */
+.silent-mode .pill-container,
+.silent-mode .button-container {
+    opacity: 0;
+    pointer-events: none;
+}

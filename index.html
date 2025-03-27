@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="pill-container">
+        <button disabled><i class="fas fa-home"></i></button>
+        <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i></button>
+    </div>
+    <h1>Kyu Nahi Hori<span style="color:#F55313;"> Padhai</span></h1>
+    <div id="timer"><span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span></div>
+    <div class="button-container">
+        <button onclick="startTimer(15 * 60)">15 Min</button>
+        <button onclick="startTimer(30 * 60)">30 Min</button>
+        <button onclick="startTimer(60 * 60)">1 Hour</button>
+        <button onclick="startTimer(2 * 60 * 60)">2 Hours</button>
+        <button onclick="startTimer(3 * 60 * 60)" class="full-height">3 Hours</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
